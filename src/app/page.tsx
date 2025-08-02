@@ -17,7 +17,7 @@ export default function Home() {
     e.preventDefault();
     // console.log(email, password);
     try {
-      const res = await fetch("/Data/programs.json"); // ✅ fetch from /public
+      const res = await fetch("/Data/programs.json");
       const data = await res.json();
       // console.log(data);
 
@@ -32,7 +32,7 @@ export default function Home() {
         myRoute.push("/dashboard");
       }
     } catch (error) {
-      setError("Invalid Email or Password");
+      setError("البريد الالكتروني او كلمه المرور غير صحيحة");
     }
   };
 
