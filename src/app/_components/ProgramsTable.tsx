@@ -1,83 +1,161 @@
-import React from 'react'
-
 function ProgramsTable() {
   return (
     <>
-      <div className="flex flex-col items-end px-20 pt-4 pb-7 mt-5 max-w-full font-bold text-right bg-white rounded-2xl shadow-sm w-[1593px] max-md:px-5">
-        <div className="flex flex-col max-w-full w-[1025px]">
-          <div className="text-lg text-gray-700 max-md:max-w-full">
-            البرامج التدريبية :
-          </div>
-          <div className="flex flex-wrap gap-4 items-center mt-5 w-full text-xs leading-snug text-black max-md:max-w-full">
-            <div className="flex flex-col justify-center items-end self-stretch p-3 my-auto bg-white rounded-lg border border-solid border-neutral-200 min-w-[240px] text-zinc-600 w-[408px]">
-              <div className="flex gap-3 items-center">
-                <div className="self-stretch my-auto">
-                  البحث عن أسم برنامج .........
+      {/* <div className="flex flex-col items-end px-20 pt-4 pb-7 mt-5 max-w-full font-bold text-right bg-white rounded-2xl shadow-sm w-[1593px] max-md:px-5"> */}
+      <div className="flex flex-col items-end bg-white px-10 py-7 my-5 rounded-lg shadow-md ">
+        <div className="flex flex-col  ">
+          <form>
+            <div className="text-lg text-gray-700 max-md:max-w-full">
+              البرامج التدريبية :
+            </div>
+            {/* <div className="flex bg-blue-200 flex-wrap gap-4 items-center mt-5 w-full text-xs leading-snug text-black max-md:max-w-full"> */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3">
+              {/* <div className="flex flex-col justify-center items-center self-stretch p-3 my-auto bg-white rounded-lg border border-solid border-neutral-200">
+                <div className="flex gap-3 items-center">
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/852f4a1a07d98dfdcb4139245618d3510981d0c6?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                    className="object-contain shrink-0 self-stretch my-auto w-1.5 aspect-[2]"
+                  />
+                  <div className="self-stretch my-auto">
+                    <span className=" text-zinc-600">الترتيب حسب:</span> التاريخ
+                  </div>
                 </div>
-                <img
-                  alt=""
-                  loading="lazy"
-                  src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/a74829c3b4e3f3c3b09448a404dffc7d7f2dc35b?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                  className="object-contain shrink-0 self-stretch my-auto aspect-square w-[18px]"
+                <div className="flex flex-col justify-center items-center self-stretch p-3 my-auto bg-white rounded-lg border border-solid border-neutral-200">
+                  <div className="flex gap-3 items-center">
+                    <img
+                      alt=""
+                      loading="lazy"
+                      src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/852f4a1a07d98dfdcb4139245618d3510981d0c6?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                      className="object-contain shrink-0 self-stretch my-auto w-1.5 aspect-[2]"
+                    />
+                    <div className="self-stretch my-auto">
+                      <span className=" text-zinc-600">عرض :</span> جميع البرامج
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center self-stretch p-3 my-auto bg-white rounded-lg border border-solid border-neutral-200">
+                  <div className="flex gap-3 items-center">
+                    <img
+                      alt=""
+                      loading="lazy"
+                      src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/852f4a1a07d98dfdcb4139245618d3510981d0c6?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                      className="object-contain shrink-0 self-stretch my-auto w-1.5 aspect-[2]"
+                    />
+                    <div className="self-stretch my-auto">
+                      <span className=" text-zinc-600">الحالة :</span> نشطة
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center items-center self-stretch p-3 my-auto bg-white rounded-lg border border-solid border-neutral-200">
+                  <div className="flex gap-3 items-center">
+                    <img
+                      alt=""
+                      loading="lazy"
+                      src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/852f4a1a07d98dfdcb4139245618d3510981d0c6?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                      className="object-contain shrink-0 self-stretch my-auto w-1.5 aspect-[2]"
+                    />
+                    <div className="self-stretch my-auto w-[95px]">
+                      <span className=" text-zinc-600">المجال:</span> دورات
+                      تقنية{" "}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center  self-stretch p-3 my-auto bg-teal-200 rounded-lg border border-solid border-neutral-200 min-w-[240px] text-zinc-600 w-[408px]">
+                  <div className="flex gap-3 items-center text-start">
+                    <img
+                      alt=""
+                      loading="lazy"
+                      src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/a74829c3b4e3f3c3b09448a404dffc7d7f2dc35b?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                      className="object-contain shrink-0 self-stretch my-auto aspect-square w-[18px]"
+                    />
+                    <div className="self-stretch my-auto">
+                      البحث عن أسم برنامج .........
+                    </div>
+                  </div>
+                </div>
+              </div> */}
+
+              {/* التاريخ */}
+              <div className="flex items-center border border-gray-300 rounded-lg bg-white p-3 text-start ">
+                <label
+                  htmlFor="history"
+                  className="text-zinc-600 text-nowrap  "
+                >
+                  الترتيب حسب:
+                </label>
+                <input
+                  type="date"
+                  id="history"
+                  placeholder=" التاريخ"
+                  className="outline-none w-[50%] text-center text-gray-700"
                 />
               </div>
-            </div>
-            <div className="flex flex-col justify-center items-center self-stretch p-3 my-auto bg-white rounded-lg border border-solid border-neutral-200">
-              <div className="flex gap-3 items-center">
-                <img
-                  alt=""
-                  loading="lazy"
-                  src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/852f4a1a07d98dfdcb4139245618d3510981d0c6?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                  className="object-contain shrink-0 self-stretch my-auto w-1.5 aspect-[2]"
+              {/* جميع البرامج */}
+              <div className="flex items-center border border-gray-300 rounded-lg bg-white p-3 text-start">
+                <label
+                  className="text-zinc-600 text-nowrap  "
+                  htmlFor="allPrograms"
+                >
+                  عرض :
+                </label>
+                <input
+                  type="text"
+                  id="allPrograms"
+                  placeholder=" جميع البرامج"
+                  className="outline-none w-[50%] text-center text-gray-700"
                 />
-                <div className="self-stretch my-auto w-[95px]">
-                  <span className=" text-zinc-600">المجال:</span> دورات تقنية{" "}
+              </div>
+              {/* الحالة */}
+              <div className="flex items-center border border-gray-300 rounded-lg bg-white p-3 text-start">
+                <label className="text-zinc-600 text-nowrap " htmlFor="status">
+                  الحالة :
+                </label>
+                <input
+                  type="text"
+                  id="status"
+                  placeholder=" نشطه"
+                  className="outline-none w-[50%] text-center text-gray-700"
+                />
+              </div>
+              {/* المجال */}
+              <div className="flex items-center border border-gray-300 rounded-lg bg-white p-3 text-start">
+                <label
+                  className="text-zinc-600 text-nowrap  "
+                  htmlFor="category"
+                >
+                  المجال :
+                </label>
+                <input
+                  type="text"
+                  id="category"
+                  placeholder=" دورات تقنية"
+                  className="outline-none w-[50%] text-center text-gray-700"
+                />
+              </div>
+              {/* البحث عن اسم البرنامج */}
+              <div className="flex flex-col justify-center  self-stretch p-3 my-auto  bg-white rounded-lg border border-solid border-neutral-200  text-zinc-600 ">
+                <div className="flex gap-3 items-center text-start">
+                  <img
+                    alt=""
+                    loading="lazy"
+                    src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/a74829c3b4e3f3c3b09448a404dffc7d7f2dc35b?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                    className="object-contain shrink-0 self-stretch my-auto aspect-square w-[18px]"
+                  />
+                  <input
+                    type="text"
+                    name=""
+                    className="outline-none w-full text-gray-700"
+                    placeholder="البحث عن أسم برنامج ........."
+                  />
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center self-stretch p-3 my-auto bg-white rounded-lg border border-solid border-neutral-200">
-              <div className="flex gap-3 items-center">
-                <img
-                  alt=""
-                  loading="lazy"
-                  src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/852f4a1a07d98dfdcb4139245618d3510981d0c6?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                  className="object-contain shrink-0 self-stretch my-auto w-1.5 aspect-[2]"
-                />
-                <div className="self-stretch my-auto">
-                  <span className=" text-zinc-600">الحالة :</span> نشطة
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center items-center self-stretch p-3 my-auto bg-white rounded-lg border border-solid border-neutral-200">
-              <div className="flex gap-3 items-center">
-                <img
-                  alt=""
-                  loading="lazy"
-                  src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/852f4a1a07d98dfdcb4139245618d3510981d0c6?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                  className="object-contain shrink-0 self-stretch my-auto w-1.5 aspect-[2]"
-                />
-                <div className="self-stretch my-auto">
-                  <span className=" text-zinc-600">عرض :</span> جميع البرامج
-                </div>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center items-center self-stretch p-3 my-auto bg-white rounded-lg border border-solid border-neutral-200">
-              <div className="flex gap-3 items-center">
-                <img
-                  alt=""
-                  loading="lazy"
-                  src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/852f4a1a07d98dfdcb4139245618d3510981d0c6?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                  className="object-contain shrink-0 self-stretch my-auto w-1.5 aspect-[2]"
-                />
-                <div className="self-stretch my-auto">
-                  <span className=" text-zinc-600">الترتيب حسب:</span> التاريخ
-                </div>
-              </div>
-            </div>
-          </div>
+          </form>
         </div>
       </div>
-      <div className="flex flex-col px-10 pt-12 pb-6 mt-5 w-full text-sm font-bold text-gray-700 bg-white rounded-2xl shadow-sm max-w-[1593px] max-md:px-5 max-md:max-w-full">
+      <div className="flex flex-col px-10 pt-12 pb-6 mt-5 w-full text-sm font-bold text-gray-700  rounded-2xl shadow-sm max-w-[1593px] max-md:px-5 max-md:max-w-full">
         <div className="flex gap-5 justify-between self-end mr-20 max-w-full text-slate-400 w-[1231px] max-md:mr-2.5">
           <div className="text-slate-400">الإجراءات</div>
           <div className="text-slate-400">تاريخ البدء</div>
@@ -250,7 +328,7 @@ function ProgramsTable() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default ProgramsTable
+export default ProgramsTable;

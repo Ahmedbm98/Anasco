@@ -27,7 +27,7 @@ function Dashboard() {
                 <div className="flex flex-col ">
                   <KPISection />
                 </div>
-                <div className="flex flex-col ">
+                <div className="flex flex-col">
                   <Notifications />
                 </div>
               </div>
