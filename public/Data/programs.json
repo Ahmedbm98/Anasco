@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "ahmed123",
+      "email": "ahmed@example.com",
+      "password": "hashed_password_1",
+      "isLogin": true,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.ahmed.payload"
+    },
+    {
+      "id": 2,
+      "username": "sara456",
+      "email": "sara@example.com",
+      "password": "hashed_password_2",
+      "isLogin": true,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.sara.payload"
+    },
+    {
+      "id": 3,
+      "username": "mohamed789",
+      "email": "mohamed@example.com",
+      "password": "hashed_password_3",
+      "isLogin": true,
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.mohamed.payload"
+    }
+  ]
+}
