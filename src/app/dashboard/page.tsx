@@ -1,144 +1,19 @@
 import React from 'react'
 import SideBar from '../_components/SideBar'
+import Header from '../_components/Header'
 
 function Dashboard() {
     return (
         <div className='flex bg-gray-50'>
-
+            <div className='w-2/12 pt-8 flex justify-center'>
+                <SideBar />
+            </div>
             <div className="flex overflow-hidden flex-col items-start px-10 pt-8 pb-20  max-md:px-5 w-10/12">
                 <div className="flex flex-wrap gap-4 self-stretch text-sm font-bold text-right text-zinc-600 max-md:max-w-full">
-
-                    <section className="relative w-full">
-                        {/* Background Section */}
-                        <div className=" text-white rounded-xl p-6 h-48 flex items-center justify-end"
-                            style={{ backgroundImage: "url('/img/bg.png')" }}>
-                            <h1 className="text-lg font-semibold">شركة الرؤية المستقبلية للتقنيات</h1>
-                        </div>
-
-                        {/* User Card */}
-                        <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[96%] max-w-6xl bg-white/90 shadow-md rounded-xl p-4 flex flex-col md:flex-row justify-between items-center gap-4 z-20">
-
-                            {/* Left side: Buttons */}
-                            <div className="flex gap-3">
-                                <button className="bg-gray-100 text-sm px-4 py-2 rounded-full flex items-center gap-2">
-                                    <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="..." /> {/* أيقونة تقارير */}
-                                    </svg>
-                                    التقارير والإحصائيات
-                                </button>
-                                <button className="bg-white text-sm px-4 py-2 rounded-full flex gap-3 items-center justify-between">
-                                    معلومات عامة للمستخدم
-                                    <div className=''><svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g clipPath="url(#clip0_1_270)">
-                                            <path d="M1.53123 3.64868V7.87938L5.65623 10.3088V6.0979L1.53123 3.64868Z" fill="#2D3748" />
-                                            <path d="M6.3437 10.3088L10.4687 7.87938V3.64868L6.3437 6.0979V10.3088Z" fill="#2D3748" />
-                                            <path d="M10.125 3.09033L5.99995 0.684082L1.87495 3.09033L5.99995 5.49658L10.125 3.09033Z" fill="#2D3748" />
-                                        </g>
-                                        <defs>
-                                            <clipPath id="clip0_1_270">
-                                                <rect width="11" height="11" fill="white" transform="translate(0.5 -0.00292969)" />
-                                            </clipPath>
-                                        </defs>
-                                    </svg>
-                                    </div>
-                                </button>
-                            </div>
-
-                            {/* Right side: User Info */}
-                            <div className="flex items-center gap-3">
-                                <div className="text-right">
-                                    <h2 className="text-md font-semibold">اسم المستخدم</h2>
-                                    <p className="text-sm text-gray-500">usermail@simmple.com</p>
-                                </div>
-                                <div className="relative">
-                                    <img
-                                        src="https://randomuser.me/api/portraits/men/75.jpg"
-                                        alt="User profile"
-                                        className="w-14 h-14 rounded-lg object-cover"
-                                    />
-                                    <button className="absolute bottom-0 right-0 bg-white border p-1 rounded-full shadow-sm">
-                                        ✎
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
+                    <Header />
                 </div>
-                <div className="mt-7 w-full max-w-[1598px] max-md:max-w-full">
+                <div className="mt-20 w-full max-md:max-w-full">
                     <div className="flex gap-5 max-md:flex-col">
-                        <div className="flex flex-col w-2/5 max-md:ml-0 max-md:w-full">
-                            <div className="flex flex-col items-end px-14 pt-7 pb-24 mx-auto w-full bg-white rounded-2xl shadow-sm max-md:px-5 max-md:mt-5 max-md:max-w-full">
-                                <div className="flex flex-wrap gap-5 justify-between self-stretch max-md:max-w-full">
-                                    <div className="flex flex-col justify-center px-2.5 py-1 my-auto text-xs bg-white rounded-lg border border-solid border-zinc-300 min-h-[22px] text-zinc-600">
-                                        <div className="flex gap-3 justify-center items-center w-[63px]">
-                                            <img
-                                                alt=""
-                                                loading="lazy"
-                                                src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/085dd0fcb525d2f4159587cc90371c04bb2440df?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                                                className="object-contain shrink-0 self-stretch my-auto w-1.5 aspect-[2]"
-                                            />
-                                            <div className="self-stretch my-auto">الأسبوع الحالي</div>
-                                        </div>
-                                    </div>
-                                    <div className="text-lg font-bold leading-snug text-right text-gray-700">
-                                        آخر المستجدات في منشأتك
-                                    </div>
-                                </div>
-                                <div className="flex gap-8 mt-12 text-sm font-bold leading-snug text-right text-gray-700 max-md:mt-10 max-md:mr-1">
-                                    <div className="flex-auto text-gray-700">
-                                        تم تسجيل 15 موظفًا جديدًا في دورة &quot;القيادة والإدارة&quot;
-                                    </div>
-                                    <img
-                                        alt=""
-                                        loading="lazy"
-                                        src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/570aae2639cb8d06b722ef3f34ce422e050decd7?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                                        className="object-contain shrink-0 my-auto w-4 aspect-square"
-                                    />
-                                </div>
-                                <div className="flex gap-5 justify-between max-w-full text-xs font-bold text-right text-slate-400 w-[118px] max-md:mr-2.5">
-                                    <div className="self-start text-slate-400">22 يناير 2025</div>
-                                    <div className="shrink-0 w-0.5 border-2 border-solid bg-slate-200 border-slate-200 h-[57px]" />
-                                </div>
-                                <div className="flex gap-7 mt-3 text-sm font-bold leading-snug text-right text-gray-700">
-                                    <div className="flex-auto text-gray-700">
-                                        أكمل 10 موظفين دورة &quot;تحليل البيانات المتقدم&quot;
-                                    </div>
-                                    <img
-                                        alt=""
-                                        loading="lazy"
-                                        src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/ab1d93566967ece2ea05ce22ab4a3aab6d807c2f?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                                        className="object-contain shrink-0 self-start w-6 aspect-square"
-                                    />
-                                </div>
-                                <div className="mr-16 text-xs font-bold text-right text-slate-400 max-md:mr-2.5">
-                                    21 يناير 2025
-                                </div>
-                                <div className="flex gap-7 mt-14 text-sm font-bold leading-5 text-right text-gray-700 max-md:mt-10 max-md:mr-0.5">
-                                    <div className="flex-auto text-gray-700">
-                                        بعض الموظفين لم يكملوا دوراتهم في الوقت المحدد! مراجعة تقدمهم
-                                        مطلوب
-                                    </div>
-                                    <img
-                                        alt=""
-                                        loading="lazy"
-                                        src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/14dfcd6b86219f51b05126f83112d58e3f51af5a?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                                        className="object-contain shrink-0 my-auto w-5 aspect-[1.11]"
-                                    />
-                                </div>
-                                <div className="mt-1.5 mr-16 text-xs font-bold text-right text-slate-400 max-md:mr-2.5">
-                                    19 يناير 2025
-                                </div>
-                            </div>
-                        </div>
-                        <div className="flex flex-col ml-5 w-[26%] max-md:ml-0 max-md:w-full">
-                            <img
-                                alt=""
-                                loading="lazy"
-                                src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/9805d10a979f16d2a1ab800f4c4d0d36b6890a07?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                                className="object-contain grow w-full rounded-none aspect-[0.93] max-md:mt-5"
-                            />
-                        </div>
                         <div className="flex flex-col ml-5 w-[34%] max-md:ml-0 max-md:w-full">
                             <div className="flex flex-col grow py-7 w-full bg-white rounded-2xl shadow-sm max-md:mt-5 max-md:max-w-full">
                                 <img
@@ -218,6 +93,80 @@ function Dashboard() {
                                 </div>
                             </div>
                         </div>
+                        <div className="flex flex-col ml-5 w-[26%] max-md:ml-0 max-md:w-full">
+                            <img
+                                alt=""
+                                loading="lazy"
+                                src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/9805d10a979f16d2a1ab800f4c4d0d36b6890a07?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                                className="object-contain grow w-full rounded-none aspect-[0.93] max-md:mt-5"
+                            />
+                        </div>
+                        <div className="flex flex-col w-2/5 max-md:ml-0 max-md:w-full">
+                            <div className="flex flex-col items-end px-14 pt-7 pb-24 mx-auto w-full bg-white rounded-2xl shadow-sm max-md:px-5 max-md:mt-5 max-md:max-w-full">
+                                <div className="flex flex-wrap gap-5 justify-between self-stretch max-md:max-w-full">
+                                    <div className="flex flex-col justify-center px-2.5 py-1 my-auto text-xs bg-white rounded-lg border border-solid border-zinc-300 min-h-[22px] text-zinc-600">
+                                        <div className="flex gap-3 justify-center items-center w-[63px]">
+                                            <img
+                                                alt=""
+                                                loading="lazy"
+                                                src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/085dd0fcb525d2f4159587cc90371c04bb2440df?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                                                className="object-contain shrink-0 self-stretch my-auto w-1.5 aspect-[2]"
+                                            />
+                                            <div className="self-stretch my-auto">الأسبوع الحالي</div>
+                                        </div>
+                                    </div>
+                                    <div className="text-lg font-bold leading-snug text-right text-gray-700">
+                                        آخر المستجدات في منشأتك
+                                    </div>
+                                </div>
+                                <div className="flex gap-8 mt-12 text-sm font-bold leading-snug text-right text-gray-700 max-md:mt-10 max-md:mr-1">
+                                    <div className="flex-auto text-gray-700">
+                                        تم تسجيل 15 موظفًا جديدًا في دورة &quot;القيادة والإدارة&quot;
+                                    </div>
+                                    <img
+                                        alt=""
+                                        loading="lazy"
+                                        src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/570aae2639cb8d06b722ef3f34ce422e050decd7?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                                        className="object-contain shrink-0 my-auto w-4 aspect-square"
+                                    />
+                                </div>
+                                <div className="flex gap-5 justify-between max-w-full text-xs font-bold text-right text-slate-400 w-[118px] max-md:mr-2.5">
+                                    <div className="self-start text-slate-400">22 يناير 2025</div>
+                                    <div className="shrink-0 w-0.5 border-2 border-solid bg-slate-200 border-slate-200 h-[57px]" />
+                                </div>
+                                <div className="flex gap-7 mt-3 text-sm font-bold leading-snug text-right text-gray-700">
+                                    <div className="flex-auto text-gray-700">
+                                        أكمل 10 موظفين دورة &quot;تحليل البيانات المتقدم&quot;
+                                    </div>
+                                    <img
+                                        alt=""
+                                        loading="lazy"
+                                        src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/ab1d93566967ece2ea05ce22ab4a3aab6d807c2f?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                                        className="object-contain shrink-0 self-start w-6 aspect-square"
+                                    />
+                                </div>
+                                <div className="mr-16 text-xs font-bold text-right text-slate-400 max-md:mr-2.5">
+                                    21 يناير 2025
+                                </div>
+                                <div className="flex gap-7 mt-14 text-sm font-bold leading-5 text-right text-gray-700 max-md:mt-10 max-md:mr-0.5">
+                                    <div className="flex-auto text-gray-700">
+                                        بعض الموظفين لم يكملوا دوراتهم في الوقت المحدد! مراجعة تقدمهم
+                                        مطلوب
+                                    </div>
+                                    <img
+                                        alt=""
+                                        loading="lazy"
+                                        src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/14dfcd6b86219f51b05126f83112d58e3f51af5a?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
+                                        className="object-contain shrink-0 my-auto w-5 aspect-[1.11]"
+                                    />
+                                </div>
+                                <div className="mt-1.5 mr-16 text-xs font-bold text-right text-slate-400 max-md:mr-2.5">
+                                    19 يناير 2025
+                                </div>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
                 <div className="flex flex-col items-end px-20 pt-4 pb-7 mt-5 max-w-full font-bold text-right bg-white rounded-2xl shadow-sm w-[1593px] max-md:px-5">
@@ -467,9 +416,7 @@ function Dashboard() {
                     </div>
                 </div>
             </div>
-            <div className='w-2/12 pt-8 flex justify-center'>
-                <SideBar />
-            </div>
+
         </div>
     )
 }
