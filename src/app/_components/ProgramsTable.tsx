@@ -26,17 +26,42 @@ function ProgramsTable() {
   // Filteration Function
   const filterationDataOfProgram = (value: string) => {
     console.log(value);
-    const lastPrograms = programs.filter((newPrograms) => {
-      return (
-        newPrograms.programName.toLowerCase().includes(value.toLowerCase()) ||
-        newPrograms.status.toLowerCase().includes(value.toLowerCase()) ||
-        newPrograms.category.toLowerCase().includes(value.toLowerCase()) ||
-        newPrograms.date.toLowerCase().includes(value)
-      );
-    });
-    console.log(lastPrograms);
-    setPrograms(lastPrograms);
+
+    console.log("programs", programs);
+    setPrograms(
+      programs.filter((newPrograms) => {
+        return (
+          newPrograms.programName.toLowerCase().includes(value.toLowerCase()) ||
+          newPrograms.status.toLowerCase().includes(value.toLowerCase()) ||
+          newPrograms.category.toLowerCase().includes(value.toLowerCase()) ||
+          newPrograms.date.toLowerCase().includes(value.toLowerCase())
+        );
+      })
+    );
+    console.log("programs", programs);
+
+    // const lastPrograms = programs.filter((newPrograms) => {
+    //   return (
+    //     newPrograms.programName.toLowerCase().includes(value.toLowerCase()) ||
+    //     newPrograms.status.toLowerCase().includes(value.toLowerCase()) ||
+    //     newPrograms.category.toLowerCase().includes(value.toLowerCase()) ||
+    //     newPrograms.date.toLowerCase().includes(value)
+    //   );
+    // });
+    // console.log(lastPrograms);
+    // setPrograms(
+    //   programs?.filter((newPrograms) => {
+    //     return (
+    //       newPrograms.programName.toLowerCase().includes(value.toLowerCase()) ||
+    //       newPrograms.status.toLowerCase().includes(value.toLowerCase()) ||
+    //       newPrograms.category.toLowerCase().includes(value.toLowerCase()) ||
+    //       newPrograms.date.toLowerCase().includes(value)
+    //     );
+    //   })
+    // );
+    // console.log("programFilter", programFilter);
   };
+
   useEffect(() => {
     getAllProgram();
   }, []);
