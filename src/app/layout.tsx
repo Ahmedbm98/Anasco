@@ -1,15 +1,13 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 // import "./globals.css";
-import "./globals.css"
+import "./globals.css";
 
-import { IBM_Plex_Sans_Arabic } from 'next/font/google';
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
-  subsets: ['arabic'],
-  weight: ['400', '500', '600', '700'], // اختار اللي تحتاجه
-  variable: '--font-ibm-arabic',
-  display: 'swap',
+  subsets: ["arabic"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-ibm-arabic",
+  display: "swap",
 });
 
 export default function RootLayout({
@@ -20,7 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={ibmPlexSansArabic.className}>
       <body dir="rtl" className={`${ibmPlexSansArabic.variable} font-arabic`}>
-        {children}</body>
+        {children}
+      </body>
     </html>
   );
 }
