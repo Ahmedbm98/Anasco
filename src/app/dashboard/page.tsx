@@ -1,39 +1,69 @@
 import React from 'react'
+import SideBar from '../_components/SideBar'
 
 function Dashboard() {
     return (
-        <div>
-            <div className="flex overflow-hidden flex-col items-start px-12 pt-8 pb-20 bg-gray-50 max-md:px-5">
+        <div className='flex bg-gray-50'>
+
+            <div className="flex overflow-hidden flex-col items-start px-10 pt-8 pb-20  max-md:px-5 w-10/12">
                 <div className="flex flex-wrap gap-4 self-stretch text-sm font-bold text-right text-zinc-600 max-md:max-w-full">
-                    <img
-                        alt=""
-                        loading="lazy"
-                        srcSet="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f76ed70c6465eb5dfa9a4d3a1a39da7eb5adc675?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=100 100w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f76ed70c6465eb5dfa9a4d3a1a39da7eb5adc675?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=200 200w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f76ed70c6465eb5dfa9a4d3a1a39da7eb5adc675?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=400 400w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f76ed70c6465eb5dfa9a4d3a1a39da7eb5adc675?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=800 800w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f76ed70c6465eb5dfa9a4d3a1a39da7eb5adc675?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=1200 1200w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f76ed70c6465eb5dfa9a4d3a1a39da7eb5adc675?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=1600 1600w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f76ed70c6465eb5dfa9a4d3a1a39da7eb5adc675?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=2000 2000w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f76ed70c6465eb5dfa9a4d3a1a39da7eb5adc675?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                        className="object-contain grow shrink-0 rounded-none aspect-[4.63] basis-0 w-fit max-md:max-w-full"
-                    />
-                    <div className="flex flex-col self-start mt-3">
-                        <img
-                            alt=""
-                            loading="lazy"
-                            srcSet="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f7fa04d5c8ffcb5768a86457ab87591058e6b877?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=100 100w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f7fa04d5c8ffcb5768a86457ab87591058e6b877?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=200 200w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f7fa04d5c8ffcb5768a86457ab87591058e6b877?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=400 400w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f7fa04d5c8ffcb5768a86457ab87591058e6b877?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=800 800w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f7fa04d5c8ffcb5768a86457ab87591058e6b877?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=1200 1200w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f7fa04d5c8ffcb5768a86457ab87591058e6b877?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=1600 1600w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f7fa04d5c8ffcb5768a86457ab87591058e6b877?apiKey=e969867fc0a145258ec2d2dcaf1c3295&width=2000 2000w, https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/f7fa04d5c8ffcb5768a86457ab87591058e6b877?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                            className="object-contain self-center max-w-full aspect-[3.6] w-[115px]"
-                        />
-                        <img
-                            alt=""
-                            loading="lazy"
-                            src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/5b0af25ea325816d36f3842fd5f5a88c6533a6c1?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                            className="object-contain mt-5 w-full aspect-[250]"
-                        />
-                        <div className="flex gap-3 items-center self-end mt-9 mr-7 max-md:mr-2.5">
-                            <div className="self-stretch my-auto">لوحة التحكم</div>
-                            <img
-                                alt=""
-                                loading="lazy"
-                                src="https://api.builder.io/api/v1/image/assets/e969867fc0a145258ec2d2dcaf1c3295/81fbf3d3547b49d8cc790a7c01492cd304dd50ec?apiKey=e969867fc0a145258ec2d2dcaf1c3295&"
-                                className="object-contain shrink-0 self-stretch my-auto rounded-none aspect-square w-[30px]"
-                            />
+
+                    <section className="relative w-full">
+                        {/* Background Section */}
+                        <div className=" text-white rounded-xl p-6 h-48 flex items-center justify-end"
+                            style={{ backgroundImage: "url('/img/bg.png')" }}>
+                            <h1 className="text-lg font-semibold">شركة الرؤية المستقبلية للتقنيات</h1>
                         </div>
-                    </div>
+
+                        {/* User Card */}
+                        <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[96%] max-w-6xl bg-white/90 shadow-md rounded-xl p-4 flex flex-col md:flex-row justify-between items-center gap-4 z-20">
+
+                            {/* Left side: Buttons */}
+                            <div className="flex gap-3">
+                                <button className="bg-gray-100 text-sm px-4 py-2 rounded-full flex items-center gap-2">
+                                    <svg className="w-4 h-4 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="..." /> {/* أيقونة تقارير */}
+                                    </svg>
+                                    التقارير والإحصائيات
+                                </button>
+                                <button className="bg-white text-sm px-4 py-2 rounded-full flex gap-3 items-center justify-between">
+                                    معلومات عامة للمستخدم
+                                    <div className=''><svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clipPath="url(#clip0_1_270)">
+                                            <path d="M1.53123 3.64868V7.87938L5.65623 10.3088V6.0979L1.53123 3.64868Z" fill="#2D3748" />
+                                            <path d="M6.3437 10.3088L10.4687 7.87938V3.64868L6.3437 6.0979V10.3088Z" fill="#2D3748" />
+                                            <path d="M10.125 3.09033L5.99995 0.684082L1.87495 3.09033L5.99995 5.49658L10.125 3.09033Z" fill="#2D3748" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1_270">
+                                                <rect width="11" height="11" fill="white" transform="translate(0.5 -0.00292969)" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    </div>
+                                </button>
+                            </div>
+
+                            {/* Right side: User Info */}
+                            <div className="flex items-center gap-3">
+                                <div className="text-right">
+                                    <h2 className="text-md font-semibold">اسم المستخدم</h2>
+                                    <p className="text-sm text-gray-500">usermail@simmple.com</p>
+                                </div>
+                                <div className="relative">
+                                    <img
+                                        src="https://randomuser.me/api/portraits/men/75.jpg"
+                                        alt="User profile"
+                                        className="w-14 h-14 rounded-lg object-cover"
+                                    />
+                                    <button className="absolute bottom-0 right-0 bg-white border p-1 rounded-full shadow-sm">
+                                        ✎
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
                 <div className="mt-7 w-full max-w-[1598px] max-md:max-w-full">
                     <div className="flex gap-5 max-md:flex-col">
@@ -436,6 +466,9 @@ function Dashboard() {
                         />
                     </div>
                 </div>
+            </div>
+            <div className='w-2/12 pt-8 flex justify-center'>
+                <SideBar />
             </div>
         </div>
     )
