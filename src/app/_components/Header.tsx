@@ -1,6 +1,34 @@
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 
+interface User {
+  id: number,
+  username: string,
+  email: string,
+  password: string,
+  isLogin: boolean,
+  token: string
+}
 function Header() {
+  const [user, setUser] = useState<User>();
+
+  const getUserData = async () => {
+    try {
+      const res = await fetch("/Data/programs.json"); // ✅ fetch from /public
+      const data = await res.json();
+      const token = localStorage.getItem("token");
+      console.log(data);
+      // setPrograms(data.programs);
+      const foundUser = data.users.find(
+        (user: User) => user.token === token
+      );
+      setUser(foundUser)
+    } catch (error) {
+    }
+  }
+  useEffect(() => {
+    getUserData();
+  }, [])
   return (
     <header className="relative w-full">
       {/* Background Section */}
@@ -10,7 +38,7 @@ function Header() {
       </div>
 
       {/* User Card */}
-      <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[96%] max-w-6xl bg-white/90 shadow-md rounded-xl p-4 flex flex-col md:flex-row justify-between items-center gap-4 z-20">
+      <div className="absolute bottom-[-90px] md:bottom-[-40px] left-1/2 transform -translate-x-1/2 w-[96%] max-w-6xl bg-white/90 shadow-md rounded-xl p-4 flex flex-col md:flex-row justify-between items-center gap-4 z-20">
 
         <div className="flex items-center gap-3">
           <div className="relative">
@@ -27,8 +55,8 @@ function Header() {
             </button>
           </div>
           <div className="text-right">
-            <h2 className="text-md font-semibold">اسم المستخدم</h2>
-            <p className="text-sm text-gray-500">usermail@simmple.com</p>
+            <h2 className="text-md font-semibold">{user?.username}</h2>
+            <p className="text-sm text-gray-500">{user?.email}</p>
           </div>
         </div>
         <div className="flex gap-3">
