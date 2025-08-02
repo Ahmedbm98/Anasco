@@ -15,12 +15,15 @@ function Header() {
         <div className="flex items-center gap-3">
           <div className="relative">
             <img
-              src="https://randomuser.me/api/portraits/men/75.jpg"
+              src="/img/user.png"
               alt="User profile"
               className="w-14 h-14 rounded-lg object-cover"
             />
-            <button className="absolute bottom-0 right-0 bg-white border p-1 rounded-full shadow-sm">
-              ✎
+            <button className="absolute -bottom-2 -right-2 bg-white border p-1 rounded-lg shadow-sm">
+              <svg width="13" height="13" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.499146 7.73003V9.25003C0.499146 9.39003 0.609145 9.50003 0.749145 9.50003H2.26915C2.33415 9.50003 2.39915 9.47503 2.44415 9.42503L7.90414 3.97003L6.02915 2.09503L0.574146 7.55003C0.524146 7.60003 0.499146 7.66003 0.499146 7.73003ZM9.35414 2.52003C9.54914 2.32503 9.54914 2.01003 9.35414 1.81503L8.18415 0.645029C7.98915 0.450029 7.67414 0.450029 7.47914 0.645029L6.56414 1.56003L8.43914 3.43503L9.35414 2.52003V2.52003Z" fill="#216ED7" />
+              </svg>
+
             </button>
           </div>
           <div className="text-right">
