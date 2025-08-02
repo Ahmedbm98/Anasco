@@ -24,7 +24,7 @@ const dummyChart = {
 function KPISection() {
   return (
     <div className="bg-white p-6 rounded-xl shadow-md w-full max-w-4xl mx-auto">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col gap-2 xl:flex-row justify-between items-center mb-6">
         <h2 className="text-xl font-bold">مؤشرات أداء التدريب</h2>
         <select className="bg-white px-3 py-2 rounded-xl text-sm border border-gray-200 focus:outline-none">
           <option>الشهر الحالي</option>
@@ -32,43 +32,7 @@ function KPISection() {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {/* <TrainingCard
-          title="عدد المتدربين الإجمالي"
-          value="112 "
-          small="متدرب"
-          description="+9%"
-          trend="down"
-          chartData={dummyChart}
-          gradient="from-[#151D48] to-[#434BC9]"
-          textColor="text-white"
-          />
-        <TrainingCard
-          title="الشهادات المصدرة"
-          value="68"
-          small="شهادة"
-          description="+12% من الشهر الماضي"
-          textColor="text-black"
-          />
-        <TrainingCard
-          title="البرامج التدريبية المكتملة"
-          value="43"
-          small="برنامج"
-          description="+12%"
-          trend="up"
-          chartData={dummyChart}
-          gradient="from-[#3077F1] to-[#6BB8FF]"
-          textColor="text-white"
-          />
-        <TrainingCard
-          title="نسبة التفاعل مع البرامج"
-          value="79%"
-          small=""
-          description="-6% من الشهر الماضي"
-          trend="down"
-          chartData={dummyChart}
-          textColor="text-black"
-        /> */}
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
         <div className={`rounded-xl p-4 shadow-sm bg-gradient-to-b from-[#151D48] to-[#434BC9]`}>
           <div className="flex justify-between items-start">
             <div>

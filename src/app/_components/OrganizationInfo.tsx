@@ -2,7 +2,6 @@ import React from 'react'
 
 function OrganizationInfo() {
   return (
-    <div>
       <div className="flex flex-col grow py-7 w-full bg-white rounded-2xl shadow-sm max-md:mt-5 max-md:max-w-full">
         <img
           alt=""
@@ -90,7 +89,6 @@ function OrganizationInfo() {
           </div>
         </div>
       </div>
-    </div>
   )
 }
 
